@@ -4,7 +4,7 @@ A collection of linear algebra concepts implemented programmatically.
 
 ## Features
 
-###Matrix
+### Matrix
 
 Math:
 - Is matrix a:
@@ -41,6 +41,6 @@ Technical:
 - Hash code is the same as underlying storage
 - Conversion to a string
 
-###Ranged Random
+### Ranged Random
 
 - A random int/double generator that outputs numbers in a certain range
