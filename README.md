@@ -41,6 +41,7 @@ Technical:
 - Indexer
 - Hash code is the same as underlying storage
 - Conversion to a string
+- Exceptions
 
 ### Ranged Random
 
