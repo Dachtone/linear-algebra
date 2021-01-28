@@ -10,6 +10,7 @@ Math:
 - Is matrix a:
   - zero matrix
   - square matrix
+  - vector
   - column vector
   - row vector
 - Transposition

@@ -97,6 +97,14 @@ namespace LinearAlgebra
         }
 
         /// <summary>
+        /// Returns whether the matrix is a vector.
+        /// </summary>
+        public bool IsVector
+        {
+            get { return IsColumnVector || IsRowVector; }
+        }
+
+        /// <summary>
         /// Returns whether the matrix is a column vector.
         /// </summary>
         public bool IsColumnVector
