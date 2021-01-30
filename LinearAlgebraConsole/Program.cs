@@ -1,7 +1,6 @@
 ﻿using System;
-using LinearAlgebra;
 
-namespace LinearAlgebraConsole
+namespace LinearAlgebra.ConsoleInteraction
 {
     class Program
     {
