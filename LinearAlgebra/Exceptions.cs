@@ -2,7 +2,7 @@
 
 namespace LinearAlgebra
 {
-    class InvalidMatrixDimensionsException : Exception
+    public class InvalidMatrixDimensionsException : Exception
     {
         public InvalidMatrixDimensionsException()
         {
@@ -20,7 +20,7 @@ namespace LinearAlgebra
     }
  
 
-    class MatriciesAreNotOfTheSameSizeException : Exception
+    public class MatriciesAreNotOfTheSameSizeException : Exception
     {
         public MatriciesAreNotOfTheSameSizeException()
         {
@@ -37,7 +37,24 @@ namespace LinearAlgebra
         }
     }
 
-    class NumberOfColumnsDoesNotMatchNumberOfRowsException : Exception
+    public class MatrixTooSmallException : Exception
+    {
+        public MatrixTooSmallException()
+        {
+        }
+
+        public MatrixTooSmallException(string message)
+            : base(message)
+        {
+        }
+
+        public MatrixTooSmallException(string message, Exception inner)
+            : base(message, inner)
+        {
+        }
+    }
+
+    public class NumberOfColumnsDoesNotMatchNumberOfRowsException : Exception
     {
         public NumberOfColumnsDoesNotMatchNumberOfRowsException()
         {
@@ -54,7 +71,7 @@ namespace LinearAlgebra
         }
     }
 
-    class NotASquareMatrixException : Exception
+    public class NotASquareMatrixException : Exception
     {
         public NotASquareMatrixException()
         {
@@ -71,7 +88,7 @@ namespace LinearAlgebra
         }
     }
 
-    class FirstOrderMatrixException : Exception
+    public class FirstOrderMatrixException : Exception
     {
         public FirstOrderMatrixException()
         {

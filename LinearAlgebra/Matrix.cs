@@ -161,6 +161,11 @@ namespace LinearAlgebra
         /// <returns>The submatrix.</returns>
         public Matrix<T> Submatrix(int row, int column)
         {
+            if (Rows == 1 || Columns == 1)
+            {
+                throw new MatrixTooSmallException("Matrix is too small to create a submatrix.");
+            }
+
             // Submatrix with an order of one less
             Matrix<T> subMatrix = new Matrix<T>(Rows - 1, Columns - 1);
 
@@ -337,7 +342,7 @@ namespace LinearAlgebra
                 int row = 0, column = 0;
                 foreach (T value in this)
                 {
-                    adjugate[row, column] = AlgebraicComplement(row, column) as dynamic;
+                    adjugate[row, column] = (T)Convert.ChangeType(AlgebraicComplement(row, column), typeof(T));
 
                     if (column == Columns - 1)
                     {
@@ -557,7 +562,12 @@ namespace LinearAlgebra
         // Conversion to an array
         public static implicit operator T[,](Matrix<T> matrix)
         {
-            return matrix.storage;
+            return matrix.ToArray();
+        }
+
+        public T[,] ToArray()
+        {
+            return storage;
         }
 
         // Conversion into a string

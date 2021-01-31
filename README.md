@@ -1,6 +1,6 @@
 # Linear Algebra
 
-A collection of linear algebra concepts implemented programmatically.
+A collection of linear algebra concepts implemented programmatically with unit tests.
 
 ## Features
 
